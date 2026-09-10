@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI Admin Assistant - Executive Automation, Smart Scheduling, Expense Auditing, and Intelligent Workspace Management.">
+    <title>AI Admin Assistant - Executive AI Operations Suite</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ====================================================================
+         1. SIDEBAR NAVIGATION
+         ==================================================================== -->
+        <aside class="sidebar">
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>AI ALVA</h1>
+                    <span>Admin Suite </span>
+                </div>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-label">Main Console</div>
+                <a href="#" class="nav-link active" data-tab="dashboard" id="nav-dashboard">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="ai-chat" id="nav-ai-chat">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                    <span>AI Chat Workspace</span>
+                    <span class="badge badge-cyan badge-counter">HOT</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="email-assistant" id="nav-email-assistant">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Inbox & Email AI</span>
+                    <span class="badge badge-rose badge-counter">42</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="tasks" id="nav-tasks">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                    <span>Task Automation</span>
+                    <span class="badge badge-indigo badge-counter">4</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="calendar" id="nav-calendar">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span>Executive Schedule</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="documents" id="nav-documents">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Document Vault</span>
+                </a>
+
+                <a href="#" class="nav-link" data-tab="reminders-notes" id="nav-reminders-notes">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                    <span>Reminders & Notes</span>
+                    <span class="badge badge-indigo badge-counter">SMART</span>
+                </a>
+
+                <div class="nav-label" style="margin-top: 1.5rem;">System & Design</div>
+                <a href="#" class="nav-link" data-tab="design-system" id="nav-design-system">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                    <span>Design System</span>
+                    <span class="badge badge-cyan badge-counter">SYSTEM</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="ai-status-card">
+                    <div class="status-indicator"></div>
+                    <div class="ai-status-text">
+                        <strong>Autonomous Core</strong>
+                        <span>Gemini 3.6 Active</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ====================================================================
+         2. MAIN WRAPPER & TOP HEADER
+         ==================================================================== -->
+        <div class="main-wrapper">
+
+            <header class="top-header">
+                <div class="header-search" id="search-trigger">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" placeholder="Search commands, tasks, or prompt AI..." readonly>
+                    <span class="kbd-shortcut">Ctrl K</span>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn btn-glass btn-sm" id="header-macro-btn">
+                        <svg style="width:16px; height:16px; color: var(--accent-indigo);" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span>Quick AI Macro</span>
+                    </button>
+
+                    <div style="position:relative;">
+                        <button class="btn btn-glass btn-icon" id="header-notif-btn" title="Notifications"
+                            style="position:relative;">
+                            <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                            <span class="status-indicator"
+                                style="position:absolute; top:4px; right:4px; width:8px; height:8px; background:var(--accent-rose); box-shadow:0 0 8px var(--accent-rose);"
+                                id="notif-badge-indicator"></span>
+                        </button>
+
+                        <!-- Notifications Drawer -->
+                        <div class="notifications-drawer" id="notifications-drawer-menu">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.5rem; border-bottom:1px solid var(--glass-border);">
+                                <strong style="font-size:0.95rem;">Executive Notifications</strong>
+                                <button class="btn btn-ghost btn-sm"
+                                    onclick="showToast('Notifications', 'Marked all as read', 'info')"
+                                    style="font-size:0.75rem;">Mark Read</button>
+                            </div>
+
+                            <div style="display:flex; flex-direction:column; gap:0.65rem;">
+                                <div class="notif-item">
+                                    <div class="notif-unread-dot"></div>
+                                    <div style="flex:1;">
+                                        <div
+                                            style="display:flex; justify-content:space-between; margin-bottom:0.15rem;">
+                                            <strong style="color:var(--text-primary);">Wire Transfer Request
+                                                ($12,450)</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-muted);">12m ago</span>
+                                        </div>
+                                        <span style="font-size:0.78rem; color:var(--text-secondary);">Approval needed
+                                            for Cloud Infrastructure Inc PO #8891.</span>
+                                        <span class="badge badge-rose"
+                                            style="font-size:0.65rem; margin-top:0.35rem;">Approval Needed</span>
+                                    </div>
+                                </div>
+
+                                <div class="notif-item">
+                                    <div class="notif-unread-dot"></div>
+                                    <div style="flex:1;">
+                                        <div
+                                            style="display:flex; justify-content:space-between; margin-bottom:0.15rem;">
+                                            <strong style="color:var(--text-primary);">Calendar Overlap
+                                                Resolved</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-muted);">35m ago</span>
+                                        </div>
+                                        <span style="font-size:0.78rem; color:var(--text-secondary);">Product
+                                            Architecture Sync moved to Friday 10:00 AM.</span>
+                                        <span class="badge badge-emerald"
+                                            style="font-size:0.65rem; margin-top:0.35rem;">Calendar</span>
+                                    </div>
+                                </div>
+
+                                <div class="notif-item">
+                                    <div class="notif-unread-dot"></div>
+                                    <div style="flex:1;">
+                                        <div
+                                            style="display:flex; justify-content:space-between; margin-bottom:0.15rem;">
+                                            <strong style="color:var(--text-primary);">Q3 Expense Receipts
+                                                Audited</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-muted);">1h ago</span>
+                                        </div>
+                                        <span style="font-size:0.78rem; color:var(--text-secondary);">Agent #819
+                                            reconciled 18 pending PDF receipts.</span>
+                                        <span class="badge badge-cyan"
+                                            style="font-size:0.65rem; margin-top:0.35rem;">Finance AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-dropdown-container">
+                        <div class="user-profile" id="user-profile-trigger" style="cursor:pointer;">
+                            <div class="avatar" id="profile-avatar-display">NA</div>
+                            <div style="font-size: 0.85rem;">
+                                <strong style="display:block; line-height:1.2;" id="profile-name-display">Nayyar
+                                    Admin</strong>
+                                <span style="font-size:0.75rem; color: var(--text-secondary);"
+                                    id="profile-role-display">Chief Executive</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-dropdown-menu" id="profile-dropdown-menu">
+                            <div class="dropdown-item" id="menu-item-lock">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                                <span>Lock Console</span>
+                            </div>
+                            <div class="dropdown-item" id="menu-item-keys">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                                </svg>
+                                <span>API Tokens & Passkeys</span>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item" id="menu-item-signout" style="color:var(--accent-rose);">
+                                <svg style="color:var(--accent-rose);" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                                <span>Sign Out</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ====================================================================
+           3. CONTENT BODY VIEW SECTIONS
+           ==================================================================== -->
+            <main class="content-body">
+
+                <!-- ------------------------------------------------------------------
+             VIEW 1: DASHBOARD
+             ------------------------------------------------------------------ -->
+                <section class="page-view active-view" id="view-dashboard">
+
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Executive Control Center</h2>
+                            <p>Autonomous AI Agent monitoring and real-time administrative workflows.</p>
+                        </div>
+                        <button class="btn btn-primary" id="trigger-new-task-btn">
+                            <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                            <span>Trigger AI Macro Task</span>
+                        </button>
+                    </div>
+
+                    <!-- KPI Metrics Cards -->
+                    <div class="metrics-grid">
+                        <div class="card-glass metric-card">
+                            <div class="metric-header">
+                                <span class="metric-title">Hours Saved</span>
+                                <div class="metric-icon">
+                                    <svg style="width:20px; height:20px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">142.5 hrs</div>
+                            <div class="metric-footer">
+                                <span class="metric-trend up">↑ 18.4%</span>
+                                <span>vs last month</span>
+                            </div>
+                        </div>
+
+                        <div class="card-glass metric-card cyan">
+                            <div class="metric-header">
+                                <span class="metric-title">Automated Tasks</span>
+                                <div class="metric-icon" style="color: var(--accent-cyan);">
+                                    <svg style="width:20px; height:20px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">1,840</div>
+                            <div class="metric-footer">
+                                <span class="metric-trend up">↑ 32.1%</span>
+                                <span>efficiency gain</span>
+                            </div>
+                        </div>
+
+                        <div class="card-glass metric-card amber">
+                            <div class="metric-header">
+                                <span class="metric-title">Pending Approvals</span>
+                                <div class="metric-icon" style="color: var(--accent-amber);">
+                                    <svg style="width:20px; height:20px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">3 Tasks</div>
+                            <div class="metric-footer">
+                                <span class="badge badge-amber">Action Needed</span>
+                            </div>
+                        </div>
+
+                        <div class="card-glass metric-card emerald">
+                            <div class="metric-header">
+                                <span class="metric-title">AI System Health</span>
+                                <div class="metric-icon" style="color: var(--accent-emerald);">
+                                    <svg style="width:20px; height:20px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="metric-value">99.8%</div>
+                            <div class="metric-footer">
+                                <span class="metric-trend up">Optimal</span>
+                                <span>Latency: 140ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Dashboard Split Grid -->
+                    <div class="dashboard-grid">
+
+                        <!-- AI Assistant Interactive Chat Widget -->
+                        <div class="card-glass ai-assistant-widget">
+                            <div class="chat-header">
+                                <div class="chat-header-title">
+                                    <div class="brand-logo" style="width:30px; height:30px;">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            style="width:16px; height:16px;">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 style="font-size: 1rem; font-weight:700;">Executive AI Co-Pilot</h3>
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">Direct Command &
+                                            Task Dispatch</span>
+                                    </div>
+                                </div>
+                                <span class="badge badge-indigo">Online</span>
+                            </div>
+
+                            <!-- Chat Output Container -->
+                            <div class="chat-messages" id="chat-messages">
+                                <div class="chat-bubble ai">
+                                    <div class="chat-avatar">AI</div>
+                                    <div class="chat-content">
+                                        Good morning, Nayyar. All 4 morning administrative automations executed cleanly.
+                                        I have scanned your inbox and schedule for conflicts. How can I assist your
+                                        executive decisions today?
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick One-Click Macro Prompts -->
+                            <div class="macro-prompts">
+                                <button class="prompt-chip" data-prompt="Summarize unread inbox emails">📨 Summarize
+                                    Unread Emails</button>
+                                <button class="prompt-chip" data-prompt="Resolve calendar conflicts for Thursday">📅
+                                    Resolve Calendar Conflicts</button>
+                                <button class="prompt-chip" data-prompt="Audit Q3 expense receipts">💳 Audit Q3 Expense
+                                    Receipts</button>
+                            </div>
+
+                            <!-- Chat Input Bar -->
+                            <form id="chat-form" class="chat-input-bar">
+                                <input type="text" id="chat-input" class="chat-input-field"
+                                    placeholder="Ask AI assistant to perform admin tasks..." autocomplete="off">
+                                <button type="submit" class="btn btn-primary btn-icon">
+                                    <svg style="width:18px; height:18px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Side Widget: Executive Schedule Briefing -->
+                        <div style="display:flex; flex-direction:column; gap: 1.5rem;">
+
+                            <div class="card-glass">
+                                <div
+                                    style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+                                    <h3 style="font-size:0.95rem; font-weight:700;">Today's AI Schedule</h3>
+                                    <span class="badge badge-cyan">Auto Sync</span>
+                                </div>
+
+                                <div style="display:flex; flex-direction:column; gap: 0.85rem;">
+
+                                    <div
+                                        style="background: rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-indigo); padding:0.75rem; border-radius: var(--radius-md);">
+                                        <div style="font-size:0.75rem; color: var(--accent-indigo); font-weight:700;">
+                                            10:00 AM - 11:00 AM</div>
+                                        <strong style="font-size:0.875rem; display:block; margin:0.15rem 0;">Q3 Board
+                                            Strategy Briefing</strong>
+                                        <span style="font-size:0.78rem; color: var(--text-secondary);">AI Briefing Doc
+                                            Prepared • 4 Attendees</span>
+                                    </div>
+
+                                    <div
+                                        style="background: rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-emerald); padding:0.75rem; border-radius: var(--radius-md);">
+                                        <div style="font-size:0.75rem; color: var(--accent-emerald); font-weight:700;">
+                                            02:30 PM - 03:15 PM</div>
+                                        <strong style="font-size:0.875rem; display:block; margin:0.15rem 0;">Product
+                                            Architecture Review</strong>
+                                        <span style="font-size:0.78rem; color: var(--text-secondary);">Conflict
+                                            Rescheduled • Zoom Link Ready</span>
+                                    </div>
+
+                                    <div
+                                        style="background: rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-amber); padding:0.75rem; border-radius: var(--radius-md);">
+                                        <div style="font-size:0.75rem; color: var(--accent-amber); font-weight:700;">
+                                            05:00 PM - 05:30 PM</div>
+                                        <strong style="font-size:0.875rem; display:block; margin:0.15rem 0;">Executive
+                                            Inbox Sweep</strong>
+                                        <span style="font-size:0.78rem; color: var(--text-secondary);">AI Draft Approval
+                                            Required</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- System Resource Widget -->
+                            <div class="card-glass">
+                                <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.75rem;">Agent
+                                    Infrastructure</h3>
+                                <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.8rem;">
+                                    <div>
+                                        <div
+                                            style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">
+                                            <span style="color:var(--text-secondary);">LLM API Token Usage</span>
+                                            <strong style="color:var(--accent-cyan);">42%</strong>
+                                        </div>
+                                        <div class="progress-bar-wrap" style="width:100%;">
+                                            <div class="progress-bar-fill"
+                                                style="width: 42%; background: var(--cyan-gradient);"></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div
+                                            style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">
+                                            <span style="color:var(--text-secondary);">Memory Vector Cache</span>
+                                            <strong style="color:var(--accent-indigo);">68%</strong>
+                                        </div>
+                                        <div class="progress-bar-wrap" style="width:100%;">
+                                            <div class="progress-bar-fill" style="width: 68%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Analytics Charts Grid -->
+                    <div class="dashboard-charts-grid">
+
+                        <!-- Chart 1: AI Task Volume & Efficiency Trend -->
+                        <div class="card-glass">
+                            <div class="chart-card-header">
+                                <div>
+                                    <h3 class="chart-card-title">AI Automation Velocity & Task Volume</h3>
+                                    <span style="font-size:0.78rem; color:var(--text-secondary);">Real-time execution
+                                        metrics over past 7 days</span>
+                                </div>
+                                <span class="badge badge-indigo">Live Stream</span>
+                            </div>
+
+                            <div class="chart-wrapper">
+                                <svg class="chart-svg" viewBox="0 0 500 180" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="indigoGradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#6366f1" stop-opacity="0.5" />
+                                            <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Grid Lines -->
+                                    <line class="chart-grid-line" x1="0" y1="30" x2="500" y2="30" />
+                                    <line class="chart-grid-line" x1="0" y1="80" x2="500" y2="80" />
+                                    <line class="chart-grid-line" x1="0" y1="130" x2="500" y2="130" />
+
+                                    <!-- Filled Area -->
+                                    <path class="chart-path-area"
+                                        d="M0,130 Q70,90 140,110 T280,50 T420,70 T500,20 L500,160 L0,160 Z" />
+
+                                    <!-- Glowing Line -->
+                                    <path class="chart-path-line" d="M0,130 Q70,90 140,110 T280,50 T420,70 T500,20" />
+
+                                    <!-- Data Point Hover Dots -->
+                                    <circle class="chart-dot" cx="70" cy="100" data-value="140 tasks" />
+                                    <circle class="chart-dot" cx="140" cy="110" data-value="185 tasks" />
+                                    <circle class="chart-dot" cx="210" cy="70" data-value="290 tasks" />
+                                    <circle class="chart-dot" cx="280" cy="50" data-value="340 tasks" />
+                                    <circle class="chart-dot" cx="350" cy="80" data-value="260 tasks" />
+                                    <circle class="chart-dot" cx="420" cy="70" data-value="310 tasks" />
+                                    <circle class="chart-dot" cx="500" cy="20" data-value="480 tasks" />
+                                </svg>
+                            </div>
+
+                            <div
+                                style="display:flex; justify-content:space-between; margin-top:0.75rem; font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">
+                                <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+                            </div>
+                        </div>
+
+                        <!-- Chart 2: Category Time Savings Distribution -->
+                        <div class="card-glass">
+                            <div class="chart-card-header">
+                                <h3 class="chart-card-title">Time Savings Distribution</h3>
+                                <span class="badge badge-cyan">142.5 hrs Total</span>
+                            </div>
+
+                            <!-- SVG Donut Representation -->
+                            <div style="display:flex; justify-content:center; align-items:center; height:120px;">
+                                <svg viewBox="0 0 100 100"
+                                    style="width:110px; height:110px; transform: rotate(-90deg);">
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(255,255,255,0.05)"
+                                        stroke-width="12" />
+                                    <!-- Segment 1: Email Triage 40% -->
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="#6366f1" stroke-width="12"
+                                        stroke-dasharray="95.5 143.2" stroke-dashoffset="0" />
+                                    <!-- Segment 2: Scheduling 25% -->
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="#06b6d4" stroke-width="12"
+                                        stroke-dasharray="59.7 179" stroke-dashoffset="-95.5" />
+                                    <!-- Segment 3: Finance 20% -->
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="#10b981" stroke-width="12"
+                                        stroke-dasharray="47.7 191" stroke-dashoffset="-155.2" />
+                                    <!-- Segment 4: Docs 15% -->
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="#f59e0b" stroke-width="12"
+                                        stroke-dasharray="35.8 203" stroke-dashoffset="-202.9" />
+                                </svg>
+                            </div>
+
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span><span class="legend-color-pill" style="background:#6366f1;"></span>Email &
+                                        Inbox Triage</span>
+                                    <strong>40% (57 hrs)</strong>
+                                </div>
+                                <div class="legend-item">
+                                    <span><span class="legend-color-pill" style="background:#06b6d4;"></span>Smart
+                                        Calendar Sync</span>
+                                    <strong>25% (35.6 hrs)</strong>
+                                </div>
+                                <div class="legend-item">
+                                    <span><span class="legend-color-pill" style="background:#10b981;"></span>Expense
+                                        Reconciliation</span>
+                                    <strong>20% (28.5 hrs)</strong>
+                                </div>
+                                <div class="legend-item">
+                                    <span><span class="legend-color-pill" style="background:#f59e0b;"></span>Legal & Doc
+                                        OCR</span>
+                                    <strong>15% (21.4 hrs)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Real-Time AI Agent Live Activity Stream -->
+                    <div class="card-glass" style="margin-top: 1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+                            <div>
+                                <h3 style="font-size:1rem; font-weight:700;">Live AI Agent Activity Feed</h3>
+                                <span style="font-size:0.78rem; color:var(--text-secondary);">Real-time stream of
+                                    background administrative operations</span>
+                            </div>
+                            <button class="btn btn-ghost btn-sm"
+                                onclick="showToast('Activity Stream', 'Live feed updated', 'info')">Clear
+                                Filter</button>
+                        </div>
+
+                        <div class="activity-stream">
+                            <div class="activity-item">
+                                <div class="activity-icon">✉️</div>
+                                <div class="activity-details">
+                                    <strong>Drafted 6 Executive Responses for Board Prep</strong>
+                                    <span>Agent #402 • Verified calendar availability and attached briefing docs.</span>
+                                </div>
+                                <span class="activity-time">09:42:15 AM</span>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon"
+                                    style="background:rgba(6,182,212,0.15); color:var(--accent-cyan);">📅</div>
+                                <div class="activity-details">
+                                    <strong>Resolved Overlapping Meeting Conflict</strong>
+                                    <span>Agent #219 • Moved Product Sync from 2:00 PM to Friday 10:00 AM.</span>
+                                </div>
+                                <span class="activity-time">09:38:00 AM</span>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon"
+                                    style="background:rgba(16,185,129,0.15); color:var(--accent-emerald);">💳</div>
+                                <div class="activity-details">
+                                    <strong>Reconciled $4,280.50 Q3 Travel Expense Receipts</strong>
+                                    <span>Agent #819 • Auto-tagged 18 receipts and verified tax eligibility.</span>
+                                </div>
+                                <span class="activity-time">09:15:30 AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 2: DEDICATED EXECUTIVE AI CHAT WORKSPACE
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-ai-chat">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Executive AI Chat Workspace</h2>
+                            <p>Multi-model conversational co-pilot for high-level decision making and task automation.
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem; align-items:center;">
+                            <select class="form-control" id="chat-model-selector"
+                                style="font-size:0.8rem; padding:0.4rem 0.85rem;">
+                                <option value="Gemini 3.6 Pro">Gemini 3.6 Pro (Executive Core)</option>
+                                <option value="GPT-4o Admin">GPT-4o Administrative</option>
+                                <option value="Claude 3.5 Sonnet">Claude 3.5 Sonnet (Legal/Finance)</option>
+                            </select>
+                            <button class="btn btn-primary btn-sm" id="new-chat-thread-btn">
+                                <span>+ New AI Session</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Hub Split Layout -->
+                    <div
+                        style="display:grid; grid-template-columns: 260px 1fr; gap:1.5rem; height: calc(100vh - 210px); min-height:600px;">
+
+                        <!-- Thread Sidebar -->
+                        <div class="card-glass" style="display:flex; flex-direction:column; padding:1rem; gap:0.75rem;">
+                            <span class="nav-label" style="padding-left:0;">Active Conversations</span>
+
+                            <div style="display:flex; flex-direction:column; gap:0.35rem; flex:1; overflow-y:auto;"
+                                id="chat-threads-list">
+                                <div class="nav-link active" data-thread-id="1">
+                                    <span style="font-size:1rem;">💬</span>
+                                    <div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                                        <strong style="display:block; font-size:0.85rem;">Q3 Board Strategy
+                                            Prep</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">2m ago • 8
+                                            messages</span>
+                                    </div>
+                                </div>
+
+                                <div class="nav-link" data-thread-id="2">
+                                    <span style="font-size:1rem;">📄</span>
+                                    <div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                                        <strong style="display:block; font-size:0.85rem;">NDA Contract Scan</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">1h ago • 4
+                                            messages</span>
+                                    </div>
+                                </div>
+
+                                <div class="nav-link" data-thread-id="3">
+                                    <span style="font-size:1rem;">💳</span>
+                                    <div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                                        <strong style="display:block; font-size:0.85rem;">Q3 Expense Audit</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">Yesterday • 12
+                                            messages</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Chat Interface -->
+                        <div class="card-glass" style="display:flex; flex-direction:column; padding:1.25rem;">
+
+                            <!-- Workspace Chat Header -->
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.85rem; border-bottom:1px solid var(--glass-border);">
+                                <div>
+                                    <h3 style="font-size:1rem; font-weight:700;" id="chat-thread-title">Q3 Board
+                                        Strategy & Briefing Prep</h3>
+                                    <span style="font-size:0.75rem; color:var(--text-secondary);">Active LLM Engine:
+                                        <strong style="color:var(--accent-cyan);" id="active-model-display">Gemini 3.6
+                                            Pro</strong></span>
+                                </div>
+                                <button class="btn btn-glass btn-sm"
+                                    onclick="showToast('Export Chat', 'Transcript exported to PDF', 'success')">Export
+                                    Transcript</button>
+                            </div>
+
+                            <!-- Message Stream -->
+                            <div class="chat-messages" id="workspace-chat-messages" style="flex:1; margin:1rem 0;">
+
+                                <div class="chat-bubble ai">
+                                    <div class="chat-avatar">AI</div>
+                                    <div class="chat-content">
+                                        I have analyzed your scheduled Q3 Board Strategy Briefing for 10:00 AM. <br><br>
+                                        <strong>Key Highlights Prepared:</strong><br>
+                                        • Revenue Growth: <strong>+32.4% YoY</strong><br>
+                                        • Autonomous Task Efficiency: <strong>1,840 workflows completed</strong><br>
+                                        • Pending Approvals: <code>$12,450 Infrastructure Transfer</code><br><br>
+                                        <div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+                                            <button class="btn btn-glass btn-sm"
+                                                onclick="showToast('Action Executed', 'Drafting executive email...', 'success')">Draft
+                                                Board Email</button>
+                                            <button class="btn btn-cyan btn-sm"
+                                                onclick="showToast('Action Executed', 'Briefing saved to Document Vault', 'success')">Save
+                                                to Vault</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Macro Suggestions -->
+                            <div class="macro-prompts" style="margin-bottom:0.5rem;">
+                                <button class="prompt-chip" data-prompt="Analyze Q3 budget variance report">📊 Analyze
+                                    Q3 Budget Variance</button>
+                                <button class="prompt-chip" data-prompt="Draft executive briefing for VP Operations">📝
+                                    Draft VP Briefing</button>
+                                <button class="prompt-chip"
+                                    data-prompt="Scan for compliance risks in cloud credentials">🔒 Audit Compliance
+                                    Risks</button>
+                            </div>
+
+                            <!-- Rich Chat Form Bar -->
+                            <form id="workspace-chat-form" class="chat-input-bar">
+                                <button type="button" class="btn btn-glass btn-icon" id="attach-file-btn"
+                                    title="Attach Document">📎</button>
+                                <button type="button" class="btn btn-glass btn-icon" id="voice-input-btn"
+                                    title="Voice Command">🎙️</button>
+                                <input type="text" id="workspace-chat-input" class="chat-input-field"
+                                    placeholder="Ask AI Assistant, analyze reports, or dispatch agent commands..."
+                                    autocomplete="off">
+                                <button type="submit" class="btn btn-primary btn-icon">
+                                    <svg style="width:18px; height:18px;" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 3: AUTONOMOUS EMAIL ASSISTANT & SMART TRIAGE HUB
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-email-assistant">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Autonomous Email Assistant & Triage</h2>
+                            <p>AI-powered email categorization, sentiment analysis, and instant smart reply drafting.
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem;">
+                            <button class="btn btn-glass"
+                                onclick="showToast('AI Email Sweep', 'Scanning 42 unread executive emails...', 'info')">
+                                <span>🔄 Run AI Inbox Sweep</span>
+                            </button>
+                            <button class="btn btn-primary"
+                                onclick="showToast('Composer', 'Opening AI Email Composer...', 'success')">
+                                <span>+ Compose with AI</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Email Hub Grid -->
+                    <div class="email-inbox-grid">
+
+                        <!-- Email Inbox List Column -->
+                        <div class="card-glass" style="display:flex; flex-direction:column; padding:1rem; gap:0.75rem;">
+                            <div class="filter-group" style="margin-bottom:0.25rem;">
+                                <button class="filter-btn active">Unread (42)</button>
+                                <button class="filter-btn">Urgent (3)</button>
+                                <button class="filter-btn">AI Drafted (5)</button>
+                            </div>
+
+                            <!-- Inbox Items List -->
+                            <div style="display:flex; flex-direction:column; gap:0.65rem; flex:1; overflow-y:auto;">
+
+                                <div class="email-item active">
+                                    <div class="email-item-header">
+                                        <strong style="color:var(--accent-indigo);">VP of Operations</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">10m ago</span>
+                                    </div>
+                                    <div class="email-item-title">Q4 Budget Allocation & Hiring Plan Approval</div>
+                                    <div class="email-item-snippet">Hi Nayyar, please review the final Q4 headcount
+                                        budget proposal before 5 PM...</div>
+                                    <div style="display:flex; gap:0.35rem; margin-top:0.35rem;">
+                                        <span class="badge badge-rose" style="font-size:0.65rem;">Urgent</span>
+                                        <span class="badge badge-indigo" style="font-size:0.65rem;">Finance</span>
+                                    </div>
+                                </div>
+
+                                <div class="email-item">
+                                    <div class="email-item-header">
+                                        <strong>Legal Counsel</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">1h ago</span>
+                                    </div>
+                                    <div class="email-item-title">Vendor NDA & Security Terms Revision</div>
+                                    <div class="email-item-snippet">Attached the revised clause for indemnification
+                                        caps. Needs your sign-off...</div>
+                                    <div style="display:flex; gap:0.35rem; margin-top:0.35rem;">
+                                        <span class="badge badge-cyan" style="font-size:0.65rem;">Legal</span>
+                                    </div>
+                                </div>
+
+                                <div class="email-item">
+                                    <div class="email-item-header">
+                                        <strong>Chief Product Officer</strong>
+                                        <span style="font-size:0.7rem; color:var(--text-muted);">3h ago</span>
+                                    </div>
+                                    <div class="email-item-title">Rescheduling Product Architecture Sync</div>
+                                    <div class="email-item-snippet">Confirming moving Thursday's meeting to Friday
+                                        morning at 10:00 AM...</div>
+                                    <div style="display:flex; gap:0.35rem; margin-top:0.35rem;">
+                                        <span class="badge badge-emerald" style="font-size:0.65rem;">Calendar</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Email Detail & AI Response Composer Column -->
+                        <div class="card-glass" style="display:flex; flex-direction:column; padding:1.5rem;">
+
+                            <!-- Email Header -->
+                            <div
+                                style="padding-bottom:1rem; border-bottom:1px solid var(--glass-border); margin-bottom:1rem;">
+                                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                                    <div>
+                                        <h3 style="font-size:1.15rem; font-weight:800;">Q4 Budget Allocation & Hiring
+                                            Plan Approval</h3>
+                                        <div
+                                            style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">
+                                            From: <strong>VP Operations (ops@executive.ai)</strong> • To: <strong>Nayyar
+                                                Admin</strong>
+                                        </div>
+                                    </div>
+                                    <span class="badge badge-rose" style="padding:0.4rem 0.85rem;">Urgent Action
+                                        Required</span>
+                                </div>
+                            </div>
+
+                            <!-- AI Smart Triage Analysis Card -->
+                            <div class="triage-card">
+                                <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                                    <span style="font-size:1.1rem;">✨</span>
+                                    <strong style="font-size:0.9rem; color:var(--accent-indigo);">AI Triage & Key
+                                        Takeaways:</strong>
+                                </div>
+                                <ul
+                                    style="font-size:0.825rem; color:var(--text-secondary); padding-left:1.25rem; line-height:1.5;">
+                                    <li>Sender is requesting sign-off on <strong>$250,000 headcount
+                                            reallocation</strong> for Q4 engineering hires.</li>
+                                    <li>Deadline: Today at <strong>5:00 PM EST</strong>.</li>
+                                    <li>AI Recommendation: <strong>Approve with condition to review headcount in 60
+                                            days.</strong></li>
+                                </ul>
+                            </div>
+
+                            <!-- Email Body Content -->
+                            <div
+                                style="font-size:0.875rem; color:var(--text-primary); line-height:1.6; margin-bottom:1.5rem; flex:1; background:rgba(0,0,0,0.2); padding:1rem; border-radius:var(--radius-md);">
+                                Hi Nayyar,<br><br>
+                                Attached is the final headcount budget allocation proposal for Q4. We need to reallocate
+                                $250,000 from marketing operations into core AI engineering to support our autonomous
+                                agent initiatives.<br><br>
+                                Please confirm approval before 5:00 PM today so HR can issue candidate offers.<br><br>
+                                Best regards,<br>
+                                <strong>VP of Operations</strong>
+                            </div>
+
+                            <!-- AI Smart Reply Presets & Editor -->
+                            <div
+                                style="background:rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-radius:var(--radius-lg); padding:1rem;">
+                                <div
+                                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                                    <strong style="font-size:0.85rem; color:var(--accent-cyan);">⚡ AI Smart Response
+                                        Presets:</strong>
+                                    <div style="display:flex; gap:0.35rem;">
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Tone Refined', 'Set response tone to Concise & Assertive', 'info')">Tone:
+                                            Executive</button>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex; gap:0.5rem; margin-bottom:0.85rem;">
+                                    <button class="btn btn-glass btn-sm" id="preset-approve-btn">✅ Approve
+                                        Reallocation</button>
+                                    <button class="btn btn-glass btn-sm" id="preset-request-info-btn">❓ Request
+                                        Breakdown</button>
+                                    <button class="btn btn-ghost btn-sm" id="preset-decline-btn"
+                                        style="color:var(--accent-rose);">❌ Decline Proposal</button>
+                                </div>
+
+                                <!-- Response Textarea -->
+                                <textarea id="email-reply-textarea" class="form-control" rows="3"
+                                    placeholder="AI reply drafted... Click a preset above or type custom reply..."
+                                    style="resize:vertical; font-size:0.85rem; margin-bottom:0.75rem;">Hi Ops Team,
+
+I have reviewed the Q4 headcount budget proposal and hereby approve the $250,000 reallocation to core AI engineering. Please proceed with candidate offers.
+
+Best regards,
+Nayyar Admin</textarea>
+
+                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                    <button class="btn btn-glass btn-sm"
+                                        onclick="showToast('AI Refiner', 'Optimizing response clarity...', 'success')">✨
+                                        Auto-Refine Tone</button>
+                                    <button class="btn btn-primary"
+                                        onclick="showToast('Email Sent', 'Response dispatched via Executive Mail API', 'success')">
+                                        <span>Send Reply</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 2: TASK MANAGEMENT HUB & KANBAN BOARD
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-tasks">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Autonomous Task Management Hub</h2>
+                            <p>Orchestrate, approve, and monitor multi-agent AI execution pipelines.</p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem;">
+                            <button class="btn btn-glass"
+                                onclick="showToast('Bulk Action', 'Approving all 2 pending requests...', 'success')">
+                                <span>Approve All (2)</span>
+                            </button>
+                            <button class="btn btn-primary" id="open-create-task-modal">
+                                <svg style="width:18px; height:18px;" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                                <span>+ Create AI Task</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Task Filter & View Mode Bar -->
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <button class="filter-btn active">All Tasks (8)</button>
+                            <button class="filter-btn">AI Active (2)</button>
+                            <button class="filter-btn">Needs Approval (2)</button>
+                            <button class="filter-btn">Scheduled (2)</button>
+                            <button class="filter-btn">Completed (2)</button>
+                        </div>
+
+                        <div class="filter-group">
+                            <button class="filter-btn active" id="toggle-kanban-view">
+                                <svg style="width:14px; height:14px; vertical-align:middle;" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                </svg>
+                                Kanban View
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Kanban Board Columns -->
+                    <div class="kanban-grid" id="kanban-board-container">
+
+                        <!-- Column 1: Queued / Scheduled -->
+                        <div class="kanban-column">
+                            <div class="kanban-column-header">
+                                <div class="kanban-column-title">
+                                    <span style="color:var(--text-muted);">🕒</span> Queued / Scheduled
+                                </div>
+                                <span class="badge badge-indigo">2</span>
+                            </div>
+
+                            <div class="kanban-cards-container">
+                                <div class="kanban-card">
+                                    <span class="badge badge-cyan"
+                                        style="font-size:0.7rem; margin-bottom:0.4rem;">Security</span>
+                                    <div class="kanban-card-title">Nightly Infrastructure Audit</div>
+                                    <div class="kanban-card-desc">Scheduled for 02:00 AM • Automated compliance scan
+                                        across AWS & Azure credentials.</div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #901</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Run Task', 'Triggering task now...', 'info')">Run
+                                            Now</button>
+                                    </div>
+                                </div>
+
+                                <div class="kanban-card">
+                                    <span class="badge badge-indigo"
+                                        style="font-size:0.7rem; margin-bottom:0.4rem;">Finance</span>
+                                    <div class="kanban-card-title">Weekly Executive Payroll Pre-check</div>
+                                    <div class="kanban-card-desc">Scheduled for Friday • Cross-check timesheets with
+                                        approved expense logs.</div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #314</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Run Task', 'Triggering payroll pre-check', 'info')">Run
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: AI Active Running -->
+                        <div class="kanban-column">
+                            <div class="kanban-column-header">
+                                <div class="kanban-column-title">
+                                    <span style="color:var(--accent-indigo);">⚡</span> AI Active Running
+                                </div>
+                                <span class="badge badge-indigo">2</span>
+                            </div>
+
+                            <div class="kanban-cards-container">
+                                <div class="kanban-card" style="border-left:3px solid var(--accent-indigo);">
+                                    <span class="badge badge-indigo"
+                                        style="font-size:0.7rem; margin-bottom:0.4rem;">Finance AI</span>
+                                    <div class="kanban-card-title">Q3 Software Expense Reconciliation</div>
+                                    <div class="kanban-card-desc">Processing 18 pending PDF invoices. Matching bank
+                                        statements.</div>
+                                    <div style="margin: 0.5rem 0;">
+                                        <div
+                                            style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem;">
+                                            <span>Progress</span><strong>65%</strong>
+                                        </div>
+                                        <div class="progress-bar-wrap" style="width:100%; height:5px;">
+                                            <div class="progress-bar-fill" style="width: 65%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #819</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Task Paused', 'Expense audit paused', 'warning')">Pause</button>
+                                    </div>
+                                </div>
+
+                                <div class="kanban-card" style="border-left:3px solid var(--accent-cyan);">
+                                    <span class="badge badge-cyan" style="font-size:0.7rem; margin-bottom:0.4rem;">Legal
+                                        OCR</span>
+                                    <div class="kanban-card-title">Vendor NDA & Service Agreement Parsing</div>
+                                    <div class="kanban-card-desc">Scanning 24-page contract for liability and
+                                        indemnification clauses.</div>
+                                    <div style="margin: 0.5rem 0;">
+                                        <div
+                                            style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); margin-bottom:0.2rem;">
+                                            <span>Progress</span><strong>80%</strong>
+                                        </div>
+                                        <div class="progress-bar-wrap" style="width:100%; height:5px;">
+                                            <div class="progress-bar-fill"
+                                                style="width: 80%; background:var(--cyan-gradient);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #512</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Task Log', 'Fetching OCR logs...', 'info')">Logs</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3: Needs Approval -->
+                        <div class="kanban-column">
+                            <div class="kanban-column-header">
+                                <div class="kanban-column-title">
+                                    <span style="color:var(--accent-amber);">⚠️</span> Needs Approval
+                                </div>
+                                <span class="badge badge-amber">2</span>
+                            </div>
+
+                            <div class="kanban-cards-container">
+                                <div class="kanban-card" style="border-left:3px solid var(--accent-rose);">
+                                    <span class="badge badge-rose" style="font-size:0.7rem; margin-bottom:0.4rem;">Wire
+                                        Transfer</span>
+                                    <div class="kanban-card-title">Wire Transfer Approval Request ($12,450)</div>
+                                    <div class="kanban-card-desc">Recipient: Cloud Infrastructure Inc. Verified against
+                                        Q3 PO #8891.</div>
+                                    <div class="kanban-card-footer">
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Declined', 'Transfer rejected', 'error')">Decline</button>
+                                        <button class="btn btn-primary btn-sm"
+                                            onclick="showToast('Approved', 'Wire transfer approved', 'success')">Approve</button>
+                                    </div>
+                                </div>
+
+                                <div class="kanban-card" style="border-left:3px solid var(--accent-amber);">
+                                    <span class="badge badge-amber"
+                                        style="font-size:0.7rem; margin-bottom:0.4rem;">Calendar Overwrite</span>
+                                    <div class="kanban-card-title">Reschedule Conflict with Board Member</div>
+                                    <div class="kanban-card-desc">Proposing move of 1-on-1 to 4:00 PM to accommodate
+                                        emergency client call.</div>
+                                    <div class="kanban-card-footer">
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('Declined', 'Conflict change declined', 'info')">Decline</button>
+                                        <button class="btn btn-cyan btn-sm"
+                                            onclick="showToast('Approved', 'Schedule update sent', 'success')">Approve</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 4: Completed -->
+                        <div class="kanban-column">
+                            <div class="kanban-column-header">
+                                <div class="kanban-column-title">
+                                    <span style="color:var(--accent-emerald);">✅</span> Completed
+                                </div>
+                                <span class="badge badge-emerald">2</span>
+                            </div>
+
+                            <div class="kanban-cards-container">
+                                <div class="kanban-card">
+                                    <span class="badge badge-emerald"
+                                        style="font-size:0.7rem; margin-bottom:0.4rem;">Communication</span>
+                                    <div class="kanban-card-title">Executive Email Triage & Draft Replies</div>
+                                    <div class="kanban-card-desc">42 emails processed • 5 priority replies drafted and
+                                        queued.</div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #402</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('View Digest', 'Email digest opened', 'info')">Report</button>
+                                    </div>
+                                </div>
+
+                                <div class="kanban-card">
+                                    <span class="badge badge-emerald" style="font-size:0.7rem; margin-bottom:0.4rem;">HR
+                                        AI</span>
+                                    <div class="kanban-card-title">Screen Executive VP Candidates</div>
+                                    <div class="kanban-card-desc">Analyzed 12 resumes against Chief Operating Officer
+                                        requirements.</div>
+                                    <div class="kanban-card-footer">
+                                        <span class="agent-tag">🤖 Agent #109</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('View Shortlist', 'Candidate shortlist opened', 'info')">Shortlist</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Structured Table List View (Hidden by default or toggled) -->
+                    <div class="card-glass" id="task-table-view" style="margin-top: 1.5rem;">
+                        <div class="task-table-container">
+                            <table class="task-table">
+                                <thead>
+                                    <tr>
+                                        <th>Task Workflow</th>
+                                        <th>Category</th>
+                                        <th>Progress</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="task-table-body">
+                                    <tr>
+                                        <td>
+                                            <div class="task-name-cell">
+                                                <div class="task-icon">📬</div>
+                                                <div class="task-info">
+                                                    <strong>Executive Email Triage & Draft Replies</strong>
+                                                    <span>Triggered 10m ago • Agent #402</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-indigo">Communication</span></td>
+                                        <td>
+                                            <div class="progress-bar-wrap">
+                                                <div class="progress-bar-fill" style="width: 100%;"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-emerald">Completed</span></td>
+                                        <td>
+                                            <button class="btn btn-ghost btn-sm"
+                                                onclick="showToast('View Log', 'Triage log fetched', 'info')">Logs</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="task-name-cell">
+                                                <div class="task-icon">🧾</div>
+                                                <div class="task-info">
+                                                    <strong>Q3 Software Expense Reconciliation</strong>
+                                                    <span>Triggered 25m ago • Agent #819</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-cyan">Finance</span></td>
+                                        <td>
+                                            <div class="progress-bar-wrap">
+                                                <div class="progress-bar-fill" style="width: 65%;"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-indigo">Processing</span></td>
+                                        <td>
+                                            <button class="btn btn-ghost btn-sm"
+                                                onclick="showToast('Task Paused', 'Expense audit paused', 'warning')">Pause</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="task-name-cell">
+                                                <div class="task-icon">⚠️</div>
+                                                <div class="task-info">
+                                                    <strong>Wire Transfer Approval Request ($12,450)</strong>
+                                                    <span>Needs Human Approval</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-rose">Security</span></td>
+                                        <td>
+                                            <div class="progress-bar-wrap">
+                                                <div class="progress-bar-fill"
+                                                    style="width: 90%; background: var(--rose-gradient);"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-amber">Approval Needed</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm"
+                                                onclick="showToast('Approved', 'Transfer authorized', 'success')">Approve</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 3: EXECUTIVE SCHEDULE
+             ------------------------------------------------------------------ -->
+                <!-- ------------------------------------------------------------------
+             VIEW 3: EXECUTIVE SMART CALENDAR HUB
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-calendar">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Executive Smart Calendar Hub</h2>
+                            <p>Autonomous AI calendar optimization, zero-overlap scheduling, and briefing docs.</p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem;">
+                            <button class="btn btn-glass"
+                                onclick="showToast('Calendar Sync', 'Synced with Outlook 365 & Google Calendar', 'success')">
+                                <span>Sync External Accounts</span>
+                            </button>
+                            <button class="btn btn-primary"
+                                onclick="showToast('Schedule Event', 'Quick meeting scheduler opened', 'info')">
+                                <span>+ Schedule Meeting</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Main Calendar Grid & Schedule Split -->
+                    <div style="display:grid; grid-template-columns: 1fr 360px; gap:1.5rem;">
+
+                        <!-- Monthly Calendar View Container -->
+                        <div class="card-glass">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                                <div style="display:flex; align-items:center; gap:0.75rem;">
+                                    <h3 style="font-size:1.1rem; font-weight:800;">September 2026</h3>
+                                    <span class="badge badge-indigo">Autonomous Optimizer Active</span>
+                                </div>
+                                <div style="display:flex; gap:0.35rem;">
+                                    <button class="btn btn-ghost btn-sm"
+                                        onclick="showToast('Month Switch', 'Navigated to August 2026', 'info')">◀
+                                        Prev</button>
+                                    <button class="btn btn-ghost btn-sm"
+                                        onclick="showToast('Today', 'Jumped to today (Sep 10)', 'info')">Today</button>
+                                    <button class="btn btn-ghost btn-sm"
+                                        onclick="showToast('Month Switch', 'Navigated to October 2026', 'info')">Next
+                                        ▶</button>
+                                </div>
+                            </div>
+
+                            <!-- Calendar Month Grid Header Days -->
+                            <div class="calendar-month-grid">
+                                <div class="calendar-day-header">SUN</div>
+                                <div class="calendar-day-header">MON</div>
+                                <div class="calendar-day-header">TUE</div>
+                                <div class="calendar-day-header">WED</div>
+                                <div class="calendar-day-header">THU</div>
+                                <div class="calendar-day-header">FRI</div>
+                                <div class="calendar-day-header">SAT</div>
+
+                                <!-- Week 1 -->
+                                <div class="calendar-day-cell other-month">
+                                    <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">2</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">3</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">4</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">5</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">6</div>
+                                </div>
+
+                                <!-- Week 2 -->
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">7</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">8</div>
+                                    <div class="cal-event-pill">Legal Sync</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">9</div>
+                                </div>
+                                <div class="calendar-day-cell today">
+                                    <div class="calendar-day-number">10 <span class="badge badge-cyan"
+                                            style="font-size:0.6rem; padding:0.1rem 0.3rem;">TODAY</span></div>
+                                    <div class="cal-event-pill">10:00 Board Briefing</div>
+                                    <div class="cal-event-pill" style="background:rgba(6,182,212,0.2); color:#67e8f9;">
+                                        02:30 Product Review</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">11</div>
+                                    <div class="cal-event-pill" style="background:rgba(245,158,11,0.2); color:#fcd34d;">
+                                        Payroll Check</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">12</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">13</div>
+                                </div>
+
+                                <!-- Week 3 -->
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">14</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">15</div>
+                                    <div class="cal-event-pill">Q3 Earnings Call</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">16</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">17</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">18</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">19</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">20</div>
+                                </div>
+
+                                <!-- Week 4 -->
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">21</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">22</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">23</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">24</div>
+                                    <div class="cal-event-pill">All-Hands Sync</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">25</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">26</div>
+                                </div>
+                                <div class="calendar-day-cell">
+                                    <div class="calendar-day-number">27</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side Timeline & AI Conflict Resolver -->
+                        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+
+                            <div class="card-glass">
+                                <div
+                                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                                    <h3 style="font-size:0.95rem; font-weight:700;">Schedule (Sep 10)</h3>
+                                    <span class="badge badge-emerald">0 Overlaps</span>
+                                </div>
+
+                                <div style="display:flex; flex-direction:column; gap:0.85rem;">
+                                    <div
+                                        style="background: rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-indigo); padding:0.75rem; border-radius: var(--radius-md);">
+                                        <div style="font-size:0.75rem; color: var(--accent-indigo); font-weight:700;">
+                                            10:00 AM - 11:00 AM</div>
+                                        <strong style="font-size:0.875rem; display:block; margin:0.15rem 0;">Q3 Board
+                                            Strategy Briefing</strong>
+                                        <span style="font-size:0.78rem; color: var(--text-secondary);">AI Briefing Doc
+                                            Attached • 4 Attendees</span>
+                                        <button class="btn btn-ghost btn-sm" style="width:100%; margin-top:0.5rem;"
+                                            onclick="showToast('Briefing Open', 'Briefing PDF ready', 'success')">View
+                                            Briefing Doc</button>
+                                    </div>
+
+                                    <div
+                                        style="background: rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-cyan); padding:0.75rem; border-radius: var(--radius-md);">
+                                        <div style="font-size:0.75rem; color: var(--accent-cyan); font-weight:700;">
+                                            02:30 PM - 03:15 PM</div>
+                                        <strong style="font-size:0.875rem; display:block; margin:0.15rem 0;">Product
+                                            Architecture Review</strong>
+                                        <span style="font-size:0.78rem; color: var(--text-secondary);">Conflict
+                                            Auto-Rescheduled by AI</span>
+                                        <button class="btn btn-ghost btn-sm" style="width:100%; margin-top:0.5rem;"
+                                            onclick="showToast('Zoom Link', 'Meeting link copied to clipboard', 'info')">Copy
+                                            Zoom Link</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI Calendar Actions -->
+                            <div class="card-glass" style="padding:1.25rem;">
+                                <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.75rem;">AI Calendar
+                                    Optimizer</h3>
+                                <button class="btn btn-primary" style="width:100%; margin-bottom:0.5rem;"
+                                    onclick="showToast('Calendar Optimizer', 'Scanning schedule for conflicts...', 'success')">✨
+                                    Auto-Optimize Schedule</button>
+                                <button class="btn btn-glass" style="width:100%;"
+                                    onclick="showToast('Briefing Generator', 'Generating daily briefing PDF...', 'info')">📄
+                                    Draft Daily Briefing Doc</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 4: AI DOCUMENT INTELLIGENCE & ANALYSIS HUB
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-documents">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>AI Document Intelligence & Analysis Hub</h2>
+                            <p>Autonomous OCR parsing, financial extraction, legal risk scanning, and vector search
+                                indexing.</p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem;">
+                            <button class="btn btn-glass"
+                                onclick="showToast('Re-index Vault', 'Re-indexing 142 vector document chunks', 'info')">Re-index
+                                Vault</button>
+                            <button class="btn btn-primary"
+                                onclick="document.getElementById('doc-upload-file-input').click()">
+                                <svg style="width:18px; height:18px;" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                                </svg>
+                                <span>Upload & Analyze</span>
+                            </button>
+                            <input type="file" id="doc-upload-file-input" style="display:none;"
+                                onchange="showToast('Uploading Document', 'Running OCR and AI extraction...', 'success')">
+                        </div>
+                    </div>
+
+                    <!-- Interactive Drag & Drop Upload Zone -->
+                    <div class="file-dropzone" id="document-dropzone">
+                        <div style="font-size:2.2rem; margin-bottom:0.5rem;">📄</div>
+                        <h3 style="font-size:1.1rem; font-weight:700;">Drag & Drop Executive Documents for AI Analysis
+                        </h3>
+                        <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">
+                            Supports PDF, DOCX, XLSX, and Scanned Receipts • Instant OCR, Risk Audit, & Financial
+                            Extraction
+                        </p>
+                        <div style="display:flex; justify-content:center; gap:0.5rem; margin-top:1rem;">
+                            <button class="btn btn-glass btn-sm"
+                                onclick="showToast('Demo File', 'Analyzing sample Financial Statement PDF...', 'info')">Demo:
+                                Q3 Financial PDF</button>
+                            <button class="btn btn-glass btn-sm"
+                                onclick="showToast('Demo File', 'Scanning sample Legal NDA DOCX...', 'info')">Demo:
+                                Legal NDA Agreement</button>
+                        </div>
+                    </div>
+
+                    <!-- Filter & Search Bar -->
+                    <div class="filter-bar" style="margin-bottom:1.5rem;">
+                        <div class="filter-group">
+                            <button class="filter-btn active">All Vault Files (6)</button>
+                            <button class="filter-btn">Financial PDFs (2)</button>
+                            <button class="filter-btn">Legal Contracts (2)</button>
+                            <button class="filter-btn">OCR Receipts (2)</button>
+                        </div>
+                        <span class="badge badge-emerald">100% Vector Indexed</span>
+                    </div>
+
+                    <!-- Multi-Document Analysis Cards Grid -->
+                    <div class="doc-analysis-grid">
+
+                        <!-- Document Card 1: Financial Statement -->
+                        <div class="doc-card">
+                            <div>
+                                <div class="doc-header">
+                                    <div class="doc-icon-badge" style="color:var(--accent-indigo);">📊</div>
+                                    <span class="badge badge-indigo">Financial PDF</span>
+                                </div>
+                                <h4 style="font-size:1rem; font-weight:700;">Q3_Financial_Statement_Final.pdf</h4>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">Uploaded 2h ago • 24 Pages •
+                                    142 Metrics</span>
+
+                                <div class="doc-extracted-meta">
+                                    <div class="meta-row"><span>Gross Revenue:</span><strong>$4,280,500.00</strong>
+                                    </div>
+                                    <div class="meta-row"><span>YoY Margin Growth:</span><strong
+                                            style="color:var(--accent-emerald);">+32.4%</strong></div>
+                                    <div class="meta-row"><span>Tax Risk Audit:</span><strong
+                                            style="color:var(--accent-emerald);">PASSED (0 Flags)</strong></div>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+                                <button class="btn btn-glass btn-sm" style="flex:1;"
+                                    onclick="showToast('AI Deep Scan', 'Extracting revenue breakdown chart...', 'success')">Deep
+                                    AI Analysis</button>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="showToast('Report Saved', 'PDF summary sent to chat co-pilot', 'info')">Summarize</button>
+                            </div>
+                        </div>
+
+                        <!-- Document Card 2: Legal Agreement -->
+                        <div class="doc-card">
+                            <div>
+                                <div class="doc-header">
+                                    <div class="doc-icon-badge" style="color:var(--accent-cyan);">⚖️</div>
+                                    <span class="badge badge-cyan">Legal Contract</span>
+                                </div>
+                                <h4 style="font-size:1rem; font-weight:700;">Vendor_Service_Agreement_v4.docx</h4>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">Uploaded Yesterday • 18
+                                    Pages</span>
+
+                                <div class="doc-extracted-meta">
+                                    <div class="meta-row"><span>Legal Compliance Score:</span><strong
+                                            style="color:var(--accent-cyan);">98% Optimal</strong></div>
+                                    <div class="meta-row"><span>Indemnification
+                                            Cap:</span><strong>$1,000,000.00</strong></div>
+                                    <div class="meta-row"><span>Non-Standard Clauses:</span><strong
+                                            style="color:var(--accent-emerald);">0 Detected</strong></div>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+                                <button class="btn btn-glass btn-sm" style="flex:1;"
+                                    onclick="showToast('Risk Audit', 'Scanning liability indemnification clauses...', 'success')">View
+                                    Risk Report</button>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="showToast('Export Legal', 'Summary saved to Document Vault', 'info')">Audit
+                                    Report</button>
+                            </div>
+                        </div>
+
+                        <!-- Document Card 3: Cloud Infrastructure Invoice -->
+                        <div class="doc-card">
+                            <div>
+                                <div class="doc-header">
+                                    <div class="doc-icon-badge" style="color:var(--accent-amber);">🧾</div>
+                                    <span class="badge badge-amber">OCR Expense Invoice</span>
+                                </div>
+                                <h4 style="font-size:1rem; font-weight:700;">AWS_Cloud_Infrastructure_Invoice.pdf</h4>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">OCR Parsed 30m ago • Receipt
+                                    Match</span>
+
+                                <div class="doc-extracted-meta">
+                                    <div class="meta-row"><span>Total Amount:</span><strong>$12,450.00</strong></div>
+                                    <div class="meta-row"><span>Matched PO Number:</span><strong
+                                            style="color:var(--accent-cyan);">PO-8891</strong></div>
+                                    <div class="meta-row"><span>Approval Status:</span><strong
+                                            style="color:var(--accent-amber);">Needs Sign-off</strong></div>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+                                <button class="btn btn-ghost btn-sm" style="flex:1;"
+                                    onclick="showToast('OCR Verification', 'Line items verified against PO #8891', 'info')">Verify
+                                    Line Items</button>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="showToast('Approved Invoice', 'Authorized payment for $12,450.00', 'success')">Approve
+                                    Payment</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 5: SMART REMINDERS & EXECUTIVE NOTES VAULT
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-reminders-notes">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Smart Reminders & Executive Notes</h2>
+                            <p>AI-scheduled reminder alerts and intelligent scratchpads with instant auto-summarization.
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:0.75rem;">
+                            <button class="btn btn-glass" id="create-reminder-btn">
+                                <span>+ New Reminder</span>
+                            </button>
+                            <button class="btn btn-primary" id="create-note-btn">
+                                <span>+ Create Smart Note</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Reminders & Notes Grid -->
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+
+                        <!-- Smart Reminders Section -->
+                        <div class="card-glass">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--glass-border);">
+                                <h3 style="font-size:1rem; font-weight:700;">Smart AI Reminders</h3>
+                                <span class="badge badge-amber" id="reminders-count-badge">2 Active</span>
+                            </div>
+
+                            <!-- Quick Reminder Input Bar -->
+                            <form id="quick-reminder-form" style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+                                <input type="text" id="quick-reminder-input" class="form-control"
+                                    placeholder="Quick add reminder (e.g. Call CFO at 3:00 PM)..." required>
+                                <button type="submit" class="btn btn-cyan btn-sm">Add</button>
+                            </form>
+
+                            <!-- Reminder List -->
+                            <div style="display:flex; flex-direction:column; gap:0.75rem;"
+                                id="reminders-list-container">
+
+                                <div class="activity-item" style="align-items:center;">
+                                    <input type="checkbox" style="width:18px; height:18px; cursor:pointer;"
+                                        onchange="showToast('Reminder Updated', 'Marked as completed', 'success')">
+                                    <div class="activity-details" style="flex:1;">
+                                        <strong>Review Q3 Tax Compliance Draft before 5:00 PM</strong>
+                                        <span style="color:var(--accent-amber);">Due Today 05:00 PM • AI
+                                            Auto-Scheduled</span>
+                                    </div>
+                                    <span class="badge badge-rose">Urgent</span>
+                                </div>
+
+                                <div class="activity-item" style="align-items:center;">
+                                    <input type="checkbox" style="width:18px; height:18px; cursor:pointer;"
+                                        onchange="showToast('Reminder Updated', 'Marked as completed', 'success')">
+                                    <div class="activity-details" style="flex:1;">
+                                        <strong>Call VP Operations regarding Q4 hiring budget</strong>
+                                        <span style="color:var(--text-secondary);">Today 02:30 PM</span>
+                                    </div>
+                                    <span class="badge badge-indigo">Executive</span>
+                                </div>
+
+                                <div class="activity-item" style="align-items:center; opacity:0.6;">
+                                    <input type="checkbox" checked style="width:18px; height:18px; cursor:pointer;">
+                                    <div class="activity-details" style="flex:1;">
+                                        <strong style="text-decoration:line-through;">Approve Cloud Infrastructure
+                                            Invoice ($12,450)</strong>
+                                        <span style="color:var(--accent-emerald);">Completed Today</span>
+                                    </div>
+                                    <span class="badge badge-emerald">Done</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Executive Notes Vault Section -->
+                        <div class="card-glass">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--glass-border);">
+                                <h3 style="font-size:1rem; font-weight:700;">Executive Notes & Scratchpad</h3>
+                                <span class="badge badge-cyan">Auto-Summarized</span>
+                            </div>
+
+                            <!-- Quick Note Input Area -->
+                            <form id="quick-note-form"
+                                style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.25rem;">
+                                <input type="text" id="quick-note-title" class="form-control"
+                                    placeholder="Note Title (e.g. Q4 OKRs & Goals)" required>
+                                <textarea id="quick-note-content" class="form-control" rows="2"
+                                    placeholder="Write executive thoughts, meeting takeaways, or strategy details..."
+                                    style="resize:vertical;" required></textarea>
+                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                    <select class="form-control" id="quick-note-tag"
+                                        style="width:130px; font-size:0.8rem; padding:0.3rem 0.6rem;">
+                                        <option value="Strategy">#Strategy</option>
+                                        <option value="Legal">#Legal</option>
+                                        <option value="Finance">#Finance</option>
+                                        <option value="Private">#Private</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary btn-sm">Save Note</button>
+                                </div>
+                            </form>
+
+                            <!-- Notes Grid Container -->
+                            <div style="display:flex; flex-direction:column; gap:0.85rem;" id="notes-list-container">
+
+                                <div
+                                    style="background:rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-indigo); padding:0.85rem; border-radius:var(--radius-md);">
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem;">
+                                        <strong style="font-size:0.9rem;">Board Strategy Executive Summary</strong>
+                                        <span class="badge badge-indigo">#Strategy</span>
+                                    </div>
+                                    <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.4;">
+                                        Focus Q4 expansion on autonomous AI workflows. Target 40% reduction in manual
+                                        admin overhead.
+                                    </p>
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-top:0.65rem; font-size:0.75rem; color:var(--text-muted);">
+                                        <span>Updated 10m ago</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('AI Summarizer', 'Extracted 3 action items from note', 'success')">✨
+                                            Auto-Summarize</button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style="background:rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-left:3px solid var(--accent-cyan); padding:0.85rem; border-radius:var(--radius-md);">
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem;">
+                                        <strong style="font-size:0.9rem;">Vendor Contract Negotiation Terms</strong>
+                                        <span class="badge badge-cyan">#Legal</span>
+                                    </div>
+                                    <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.4;">
+                                        Ensure all SaaS vendor contracts include zero data retention clauses for LLM
+                                        training.
+                                    </p>
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-top:0.65rem; font-size:0.75rem; color:var(--text-muted);">
+                                        <span>Updated 2h ago</span>
+                                        <button class="btn btn-ghost btn-sm"
+                                            onclick="showToast('AI Summarizer', 'Verified zero retention clause', 'success')">✨
+                                            Auto-Summarize</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ------------------------------------------------------------------
+             VIEW 5: DESIGN SYSTEM SHOWCASE GALLERY
+             ------------------------------------------------------------------ -->
+                <section class="page-view" id="view-design-system">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h2>Executive Design System Gallery</h2>
+                            <p>Interactive showcase of design tokens, color palette, typography, badges, glass cards,
+                                and UI components.</p>
+                        </div>
+                        <span class="badge badge-cyan" style="padding:0.4rem 0.85rem; font-size:0.8rem;">Design System
+                            v2.4</span>
+                    </div>
+
+                    <!-- Color Tokens -->
+                    <div class="ds-section-title">
+                        <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                        Color Tokens & Palette
+                    </div>
+
+                    <div class="swatch-grid">
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--bg-darkest);"></div>
+                            <div class="swatch-name">Background Darkest</div>
+                            <div class="swatch-hex">#07090e</div>
+                        </div>
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--bg-surface);"></div>
+                            <div class="swatch-name">Surface Dark</div>
+                            <div class="swatch-hex">#111827</div>
+                        </div>
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--primary-gradient);"></div>
+                            <div class="swatch-name">Indigo-Violet Grad</div>
+                            <div class="swatch-hex">Primary Brand</div>
+                        </div>
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--cyan-gradient);"></div>
+                            <div class="swatch-name">Cyan Accent Grad</div>
+                            <div class="swatch-hex">#06b6d4</div>
+                        </div>
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--emerald-gradient);"></div>
+                            <div class="swatch-name">Emerald Success</div>
+                            <div class="swatch-hex">#10b981</div>
+                        </div>
+                        <div class="swatch-card">
+                            <div class="swatch-color" style="background: var(--rose-gradient);"></div>
+                            <div class="swatch-name">Rose Alert</div>
+                            <div class="swatch-hex">#f43f5e</div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons Showcase -->
+                    <div class="ds-section-title">
+                        <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                        </svg>
+                        Buttons & Interactive Controls
+                    </div>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+                        <button class="btn btn-primary">Primary Glow</button>
+                        <button class="btn btn-cyan">Cyan Action</button>
+                        <button class="btn btn-glass">Glass Border</button>
+                        <button class="btn btn-ghost">Ghost Button</button>
+                        <button class="btn btn-primary btn-sm">Small Button</button>
+                        <button class="btn btn-glass btn-icon">⚡</button>
+                    </div>
+
+                    <!-- Badges Showcase -->
+                    <div class="ds-section-title">
+                        <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                        </svg>
+                        Status Badges & Pills
+                    </div>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
+                        <span class="badge badge-indigo">Indigo Badge</span>
+                        <span class="badge badge-cyan">Cyan Status</span>
+                        <span class="badge badge-emerald">Emerald Active</span>
+                        <span class="badge badge-amber">Amber Warning</span>
+                        <span class="badge badge-rose">Rose Critical</span>
+                    </div>
+
+                    <!-- Form Controls Demo -->
+                    <div class="ds-section-title">
+                        <svg style="width:18px; height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Form Fields & Inputs
+                    </div>
+
+                    <div class="form-demo-grid">
+                        <div class="form-group">
+                            <label class="form-label">AI Agent Priority Level</label>
+                            <select class="form-control">
+                                <option>High Priority (Autonomous Executive)</option>
+                                <option>Standard Priority</option>
+                                <option>Human Oversight Required</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Automated System Prompt</label>
+                            <input type="text" class="form-control"
+                                value="Parse all invoices exceeding $1,000 threshold.">
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+       CREATE TASK MODAL OVERLAY
+       ==================================================================== -->
+    <div class="modal-overlay" id="create-task-modal-overlay">
+        <div class="command-modal" style="max-width: 520px; padding: 1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+                <h3 style="font-size:1.1rem; font-weight:700;">+ Create New AI Task Workflow</h3>
+                <button class="btn btn-ghost btn-icon" id="close-task-modal-btn">✕</button>
+            </div>
+
+            <form id="create-task-form" style="display:flex; flex-direction:column; gap:1rem;">
+                <div class="form-group">
+                    <label class="form-label">Workflow Title</label>
+                    <input type="text" class="form-control" id="task-title-input"
+                        placeholder="e.g. Audit Q3 AWS Cloud Billing & Receipts" required minlength="3" maxlength="150">
+                </div>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" id="task-category-select">
+                            <option value="Finance AI">Finance & Expense</option>
+                            <option value="Legal OCR">Legal & Contracts</option>
+                            <option value="Security">Security & Audit</option>
+                            <option value="HR AI">HR & Recruiting</option>
+                            <option value="Communication">Inbox & Email</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Target Agent</label>
+                        <select class="form-control" id="task-agent-select">
+                            <option value="Agent #819 (Finance Core)">Agent #819 (Finance Core)</option>
+                            <option value="Agent #402 (Inbox Core)">Agent #402 (Inbox Core)</option>
+                            <option value="Agent #512 (Legal OCR)">Agent #512 (Legal OCR)</option>
+                            <option value="Agent #901 (Security Core)">Agent #901 (Security Core)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Execution Prompt / Instructions</label>
+                    <textarea class="form-control" id="task-prompt-input" rows="3"
+                        placeholder="Provide autonomous instructions for the AI agent..."
+                        style="resize:vertical;"></textarea>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:0.5rem;">
+                    <button type="button" class="btn btn-glass" id="cancel-task-modal-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Dispatch Agent Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+       4. COMMAND PALETTE MODAL (CTRL + K)
+       ==================================================================== -->
+    <div class="modal-overlay" id="command-modal-overlay">
+        <div class="command-modal">
+            <div class="modal-search-header">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" id="modal-search-input" placeholder="Type a command or AI prompt...">
+                <span class="kbd-shortcut">ESC to close</span>
+            </div>
+
+            <div class="command-results">
+                <div class="command-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <div class="command-item-info">
+                        <strong>Summarize Unread Emails</strong>
+                        <span>Generate executive digest of today's priority inbox</span>
+                    </div>
+                </div>
+
+                <div class="command-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    <div class="command-item-info">
+                        <strong>Reconcile Expense Receipts</strong>
+                        <span>Scan pending PDF receipts and match with bank transactions</span>
+                    </div>
+                </div>
+
+                <div class="command-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <div class="command-item-info">
+                        <strong>Optimize Calendar Conflicts</strong>
+                        <span>Auto-reschedule overlapping meetings based on priority</span>
+                    </div>
+                </div>
+
+                <div class="command-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <div class="command-item-info">
+                        <strong>Generate Weekly Executive Report</strong>
+                        <span>Compile team KPIs, revenue metrics, and operational blockers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+       5. AUTHENTICATION & LOGIN OVERLAY
+       ==================================================================== -->
+    <div class="auth-page-overlay" id="auth-page-overlay">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h2>AI Executive Login</h2>
+                <p>Authenticate to access autonomous administrative agents.</p>
+            </div>
+
+            <!-- Single Sign-On (SSO) Quick Access -->
+            <div class="sso-buttons">
+                <button class="sso-btn" id="sso-google-btn">
+                    <svg style="width:18px; height:18px;" viewBox="0 0 24 24">
+                        <path fill="#4285F4"
+                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                        <path fill="#34A853"
+                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                        <path fill="#FBBC05"
+                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                        <path fill="#EA4335"
+                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                    </svg>
+                    <span>Sign in with Google Workspace</span>
+                </button>
+
+                <button class="sso-btn" id="sso-microsoft-btn">
+                    <svg style="width:18px; height:18px;" viewBox="0 0 23 23">
+                        <path fill="#f35325" d="M1 1h10v10H1z" />
+                        <path fill="#81bc06" d="M12 1h10v10H12z" />
+                        <path fill="#05a6f0" d="M1 12h10v10H1z" />
+                        <path fill="#ffba08" d="M12 12h10v10H12z" />
+                    </svg>
+                    <span>Sign in with Microsoft 365</span>
+                </button>
+            </div>
+
+            <div class="divider-line">
+                <span>Or Security Email</span>
+            </div>
+
+            <!-- Email / Password Form -->
+            <form id="auth-login-form">
+                <div class="form-group" style="margin-bottom:1rem;">
+                    <label class="form-label">Executive Email</label>
+                    <input type="email" id="auth-email-input" class="form-control" placeholder="nayyar@executive-ai.com"
+                        value="nayyar@executive-ai.com" required>
+                </div>
+
+                <div class="form-group" style="margin-bottom:1.25rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <label class="form-label">Password</label>
+                        <a href="#" style="font-size:0.75rem; color:var(--accent-indigo);"
+                            onclick="showToast('Passkey Reset', 'Security reset link dispatched', 'info'); return false;">Forgot?</a>
+                    </div>
+                    <input type="password" id="auth-password-input" class="form-control" value="••••••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:0.85rem;">
+                    <span>Authenticate Console</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+       6. CONSOLE LOCK SCREEN OVERLAY (PIN UNLOCK)
+       ==================================================================== -->
+    <div class="auth-page-overlay" id="lock-screen-overlay">
+        <div class="auth-card" style="max-width: 380px; text-align:center;">
+            <div class="avatar"
+                style="width:64px; height:64px; font-size:1.4rem; margin: 0 auto 1rem auto; border:3px solid var(--accent-indigo);">
+                NA</div>
+            <h3 style="font-size:1.25rem; font-weight:800;">Console Locked</h3>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.2rem;">Enter 4-digit Executive PIN to
+                resume</p>
+
+            <div class="pin-input-group">
+                <input type="password" class="pin-digit" maxlength="1" id="pin-1" autofocus>
+                <input type="password" class="pin-digit" maxlength="1" id="pin-2">
+                <input type="password" class="pin-digit" maxlength="1" id="pin-3">
+                <input type="password" class="pin-digit" maxlength="1" id="pin-4">
+            </div>
+
+            <button class="btn btn-cyan" id="unlock-pin-btn" style="width:100%; margin-top:0.75rem;">
+                <span>Unlock Executive Suite</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Application Logic JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
