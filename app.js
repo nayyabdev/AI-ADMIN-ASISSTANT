@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initChartTooltips();
   initNotificationsDrawer();
   initSmartSearch();
+  initMobileNavigation();
 });
 
 function navigateToTab(tabId) {
@@ -253,11 +254,6 @@ async function simulateAIResponse(query) {
     typingBubble.remove();
     appendChatMessage('ai', `Fallback Agent Response for query: "${escapeHTML(query)}"`);
     showToast('Offline Mode', err.message || 'API unreachable', 'warning');
-  }
-}
-    // Fallback if backend offline
-    appendChatMessage('ai', `I have processed your query: <code>"${query}"</code> via local fallback agent.`);
-    showToast('AI Action Executed', 'Processed offline', 'info');
   }
 }
 
@@ -1108,6 +1104,47 @@ function attachCommandItemClickListeners() {
       } else {
         showToast('AI Action Triggered', `Executed: ${actionName}`, 'success');
         simulateAIResponse(`Execute: ${actionName}`);
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   16. MOBILE SIDEBAR DRAWER NAVIGATION LOGIC
+   -------------------------------------------------------------------------- */
+function initMobileNavigation() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const sidebar = document.getElementById('app-sidebar');
+  const backdrop = document.getElementById('sidebar-backdrop');
+  const navLinks = document.querySelectorAll('.sidebar .nav-link');
+
+  if (!mobileMenuBtn || !sidebar || !backdrop) return;
+
+  function openSidebar() {
+    sidebar.classList.add('mobile-open');
+    backdrop.classList.add('active');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('mobile-open');
+    backdrop.classList.remove('active');
+  }
+
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (sidebar.classList.contains('mobile-open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  backdrop.addEventListener('click', closeSidebar);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 1024) {
+        closeSidebar();
       }
     });
   });
